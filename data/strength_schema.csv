@@ -1,0 +1,2 @@
+unit_id,as_of_datetime,manpower_authorized,manpower_reported,combat_rating,fatigue,morale,ammo,notes,source_id,confidence
+Example-Unit-Bn1,1942-11-01T18:00:00Z,,,,,,,,rkka_1942_11_01_62a,low

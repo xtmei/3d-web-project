@@ -1,0 +1,1 @@
+export const EmptyUnitState = () => <div className="h-full grid place-items-center text-center text-[var(--fg1)]"><div><div className="text-xs tracking-[0.1em] uppercase">NO UNIT SELECTED</div><p className="text-sm">Select a battalion record from OOB tree or map card.</p></div></div>;

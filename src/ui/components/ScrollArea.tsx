@@ -1,0 +1,1 @@
+export const ScrollArea = ({ children }: { children: React.ReactNode }) => <div className="h-full overflow-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[var(--line1)]">{children}</div>;
