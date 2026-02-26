@@ -8,6 +8,7 @@
 npm install
 npm run download:maps   # optional
 npm run dev
+npm run build
 ```
 
 > 默认加载快照 `1942-11-01`，默认选中 `62A`。
@@ -30,3 +31,8 @@ npm run dev
 
 ## License note
 发布在线演示时请保留 `CREDITS.md` 里的署名与许可说明（尤其 Wikimedia CC BY-SA 3.0）。
+
+
+## CI note
+- `npm run build` 仅执行 Vite 打包，避免 `tsc -b` 在无 project references 的环境中导致构建失败。
+- 需要类型检查时请单独运行 `npm run typecheck`。
