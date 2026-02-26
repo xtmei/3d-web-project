@@ -2,9 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg0); color: var(--fg0); font-family: var(--font-sans); }
-.app-shell { min-height: 100vh; display: flex; flex-direction: column; background: radial-gradient(circle at top, #171d26, transparent 35%), var(--bg0); position: relative; }
-.app-shell::after { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: 0.07; background-image: repeating-linear-gradient(to bottom, transparent, transparent 3px, rgba(255,255,255,0.03) 4px); }
-.focus-ring:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.mononum { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: var(--bg0);
+  color: var(--fg0);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at top center, rgba(178, 151, 110, 0.11), transparent 42%),
+    var(--bg0);
+  overflow: hidden;
+}
+
+.app-shell-content {
+  position: relative;
+  z-index: 1;
+  min-height: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.resize-handle {
+  width: 7px;
+  background: linear-gradient(to right, transparent 0, var(--line0) 50%, transparent 100%);
+  cursor: col-resize;
+  transition: background-color 120ms ease;
+}
+
+.resize-handle[data-resize-handle-active] {
+  background: linear-gradient(to right, transparent 0, var(--accent) 50%, transparent 100%);
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--bg2) 84%, transparent);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(225, 231, 240, 0.06) 45%,
+    transparent 100%
+  );
+  animation: shimmer 1.35s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.table-grid {
+  display: grid;
+  width: 100%;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    min-height: 100dvh;
+  }
+}

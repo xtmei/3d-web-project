@@ -1,4 +1,26 @@
-import type { ReactNode } from 'react';
-export function Panel({ title, tools, children }: { title: string; tools?: ReactNode; children: ReactNode }) {
-  return <section className="h-full border border-[var(--line0)] bg-[var(--bg1)] flex flex-col"><header className="h-10 px-3 border-b border-[var(--line0)] flex items-center justify-between"><h3 className="text-xs tracking-[0.09em] uppercase text-[var(--fg1)]">{title}</h3><div>{tools}</div></header><div className="min-h-0 flex-1 overflow-hidden">{children}</div></section>;
+import type { ReactNode } from "react";
+import { cn } from "./cn";
+
+type PanelProps = {
+  title: string;
+  subtitle?: string;
+  tools?: ReactNode;
+  children: ReactNode;
+  className?: string;
+  bodyClassName?: string;
+};
+
+export function Panel({ title, subtitle, tools, children, className, bodyClassName }: PanelProps) {
+  return (
+    <section className={cn("flex h-full min-h-0 flex-col border border-[var(--line0)] bg-[var(--bg1)]", className)}>
+      <header className="flex h-10 items-center justify-between gap-2 border-b border-[var(--line0)] px-3">
+        <div className="min-w-0">
+          <div className="archive-label truncate">{title}</div>
+          {subtitle ? <div className="archive-caption truncate">{subtitle}</div> : null}
+        </div>
+        {tools ? <div className="flex items-center gap-1">{tools}</div> : null}
+      </header>
+      <div className={cn("min-h-0 flex-1", bodyClassName)}>{children}</div>
+    </section>
+  );
 }
