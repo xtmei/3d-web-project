@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import type { ColumnDef, SortingState, VisibilityState } from "@tanstack/react-table";
 import { flexRender, getCoreRowModel, getSortedRowModel, useReactTable } from "@tanstack/react-table";
-import { ChevronDownUp, Eye } from "lucide-react";
+import { ChevronsUpDown, Eye } from "lucide-react";
 import type { Unit } from "@/data/schema";
 import { formatNumber, formatPercent } from "@/data/units";
 import { useAppStore } from "@/app/store";
@@ -126,7 +126,7 @@ export function SummaryTable({ unit }: { unit: Unit }) {
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             Field
-            <ChevronDownUp size={12} />
+            <ChevronsUpDown size={12} />
           </button>
         ),
         cell: ({ row }) => (
@@ -145,7 +145,7 @@ export function SummaryTable({ unit }: { unit: Unit }) {
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
             Value
-            <ChevronDownUp size={12} />
+            <ChevronsUpDown size={12} />
           </button>
         ),
         cell: ({ row }) => <span className="mononum">{renderValue(row.original)}</span>,

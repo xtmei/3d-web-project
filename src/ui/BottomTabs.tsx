@@ -1,9 +1,9 @@
-import { BookTree, Map, Table2 } from "lucide-react";
+import { List, Map, Table2 } from "lucide-react";
 import { useAppStore } from "@/app/store";
 import { cn } from "./components/cn";
 
 const tabs = [
-  { id: "oob", label: "OOB", icon: BookTree },
+  { id: "oob", label: "OOB", icon: List },
   { id: "map", label: "MAP", icon: Map },
   { id: "details", label: "DETAILS", icon: Table2 }
 ] as const;
