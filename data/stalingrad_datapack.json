@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Stalingrad Battle Datapack",
+    "version": "0.1.0",
+    "generated_at": "2026-02-26T00:00:00Z",
+    "sources": [
+      {
+        "source_id": "rkka_1942_10_01_62a",
+        "source_title": "RKKA 62 Army OOB 1942-10-01",
+        "source_url": "https://rkka.wiki/index.php/РККА:Боевой_состав_на_01.10.1942",
+        "confidence": "high"
+      },
+      {
+        "source_id": "rkka_1942_11_01_62a",
+        "source_title": "RKKA 62 Army OOB 1942-11-01",
+        "source_url": "https://rkka.wiki/oob/1942-11-01/62_армия",
+        "confidence": "high"
+      },
+      {
+        "source_id": "axis_6a_wiki",
+        "source_title": "Axis order of battle at Stalingrad",
+        "source_url": "https://en.wikipedia.org/wiki/Axis_order_of_battle_at_the_Battle_of_Stalingrad",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "templates": {
+    "soviet_rifle_battalion_1942_jul": {
+      "rows": [
+        {"echelon": "company", "name": "1st Rifle Company", "role": "rifle", "authorized": {"personnel": 120}, "weapons": {"rifles": 92, "smg": 12}},
+        {"echelon": "company", "name": "2nd Rifle Company", "role": "rifle", "authorized": {"personnel": 120}, "weapons": {"rifles": 92, "smg": 12}},
+        {"echelon": "company", "name": "3rd Rifle Company", "role": "rifle", "authorized": {"personnel": 120}, "weapons": {"rifles": 92, "smg": 12}},
+        {"echelon": "company", "name": "Machine Gun Company", "role": "support", "authorized": {"personnel": 64}, "weapons": {"maxim_mg": 12}}
+      ]
+    },
+    "german_infantry_battalion_1942_standard": {
+      "rows": [
+        {"echelon": "company", "name": "1. Infanterie Kompanie", "role": "rifle", "authorized": {"personnel": 150}, "weapons": {"rifles": 102, "mg34": 12}},
+        {"echelon": "company", "name": "2. Infanterie Kompanie", "role": "rifle", "authorized": {"personnel": 150}, "weapons": {"rifles": 102, "mg34": 12}},
+        {"echelon": "company", "name": "3. Infanterie Kompanie", "role": "rifle", "authorized": {"personnel": 150}, "weapons": {"rifles": 102, "mg34": 12}},
+        {"echelon": "company", "name": "Schwere Kompanie", "role": "heavy", "authorized": {"personnel": 190}, "weapons": {"mg34": 18, "mortars": 6}}
+      ]
+    }
+  },
+  "snapshots": [
+    {
+      "date": "1942-10-01",
+      "units": [
+        {"id": "62A", "name": "62nd Army", "side": "soviet", "level": "army", "type": "army", "parentId": null, "childrenIds": ["13GSD", "95RD"], "tags": ["stalingrad"], "notes": ["Holding city line"], "position": [0, 0], "provenance": {"source_id": "rkka_1942_10_01_62a", "confidence": "high", "generated_by_template": false}},
+        {"id": "13GSD", "name": "13th Guards Rifle Division", "side": "soviet", "level": "division", "type": "rifle_division", "parentId": "62A", "childrenIds": ["34GSP"], "tags": [], "notes": [], "position": [10, 8], "provenance": {"source_id": "rkka_1942_10_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "34GSP", "name": "34th Guards Rifle Regiment", "side": "soviet", "level": "regiment", "type": "rifle_regiment", "parentId": "13GSD", "childrenIds": [], "tags": [], "notes": ["Template expansion required"], "position": [18, 10], "provenance": {"source_id": "rkka_1942_10_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "95RD", "name": "95th Rifle Division", "side": "soviet", "level": "division", "type": "rifle_division", "parentId": "62A", "childrenIds": ["241SP"], "tags": [], "notes": [], "position": [-8, 5], "provenance": {"source_id": "rkka_1942_10_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "241SP", "name": "241st Rifle Regiment", "side": "soviet", "level": "regiment", "type": "rifle_regiment", "parentId": "95RD", "childrenIds": [], "tags": [], "notes": [], "position": [-14, 8], "provenance": {"source_id": "rkka_1942_10_01_62a", "confidence": "medium", "generated_by_template": false}}
+      ],
+      "roots": ["62A"]
+    },
+    {
+      "date": "1942-11-01",
+      "units": [
+        {"id": "62A", "name": "62nd Army", "side": "soviet", "level": "army", "type": "army", "parentId": null, "childrenIds": ["13GSD", "284RD"], "tags": ["default"], "notes": ["Attritional urban combat"], "position": [0, 0], "provenance": {"source_id": "rkka_1942_11_01_62a", "confidence": "high", "generated_by_template": false}},
+        {"id": "13GSD", "name": "13th Guards Rifle Division", "side": "soviet", "level": "division", "type": "rifle_division", "parentId": "62A", "childrenIds": ["34GSP", "39GSP"], "tags": [], "notes": [], "position": [11, 6], "provenance": {"source_id": "rkka_1942_11_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "34GSP", "name": "34th Guards Rifle Regiment", "side": "soviet", "level": "regiment", "type": "rifle_regiment", "parentId": "13GSD", "childrenIds": [], "tags": [], "notes": ["Expanded to battalions"], "position": [16, 9], "provenance": {"source_id": "rkka_1942_11_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "39GSP", "name": "39th Guards Rifle Regiment", "side": "soviet", "level": "regiment", "type": "rifle_regiment", "parentId": "13GSD", "childrenIds": [], "tags": [], "notes": [], "position": [14, 4], "provenance": {"source_id": "rkka_1942_11_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "284RD", "name": "284th Rifle Division", "side": "soviet", "level": "division", "type": "rifle_division", "parentId": "62A", "childrenIds": ["1043SP"], "tags": [], "notes": [], "position": [-12, 3], "provenance": {"source_id": "rkka_1942_11_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "1043SP", "name": "1043rd Rifle Regiment", "side": "soviet", "level": "regiment", "type": "rifle_regiment", "parentId": "284RD", "childrenIds": [], "tags": [], "notes": [], "position": [-15, 7], "provenance": {"source_id": "rkka_1942_11_01_62a", "confidence": "medium", "generated_by_template": false}},
+        {"id": "6A", "name": "6th Army", "side": "axis", "level": "army", "type": "army", "parentId": null, "childrenIds": ["LIKorps"], "tags": [], "notes": ["Axis skeleton"], "position": [30, -20], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "LIKorps", "name": "LI Army Corps", "side": "axis", "level": "corps", "type": "corps", "parentId": "6A", "childrenIds": ["389ID"], "tags": [], "notes": [], "position": [26, -16], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "389ID", "name": "389. Infanterie-Division", "side": "axis", "level": "division", "type": "infantry_division", "parentId": "LIKorps", "childrenIds": ["544IR"], "tags": [], "notes": [], "position": [22, -12], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "544IR", "name": "Infanterie-Regiment 544", "side": "axis", "level": "regiment", "type": "infantry_regiment", "parentId": "389ID", "childrenIds": [], "tags": [], "notes": ["Placeholder OOB"], "position": [18, -8], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}}
+      ],
+      "roots": ["62A", "6A"]
+    },
+    {
+      "date": "1942-11-18",
+      "units": [
+        {"id": "6A", "name": "6th Army", "side": "axis", "level": "army", "type": "army", "parentId": null, "childrenIds": ["LIKorps", "XIVPK"], "tags": ["uranus"], "notes": ["Pre-encirclement posture"], "position": [26, -14], "provenance": {"source_id": "axis_6a_wiki", "confidence": "medium", "generated_by_template": false}},
+        {"id": "LIKorps", "name": "LI Army Corps", "side": "axis", "level": "corps", "type": "corps", "parentId": "6A", "childrenIds": ["389ID"], "tags": [], "notes": [], "position": [21, -10], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "XIVPK", "name": "XIV Panzer Corps", "side": "axis", "level": "corps", "type": "panzer_corps", "parentId": "6A", "childrenIds": ["16PzD"], "tags": [], "notes": [], "position": [30, -18], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "389ID", "name": "389. Infanterie-Division", "side": "axis", "level": "division", "type": "infantry_division", "parentId": "LIKorps", "childrenIds": ["544IR"], "tags": [], "notes": [], "position": [17, -8], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "544IR", "name": "Infanterie-Regiment 544", "side": "axis", "level": "regiment", "type": "infantry_regiment", "parentId": "389ID", "childrenIds": [], "tags": [], "notes": [], "position": [13, -4], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "16PzD", "name": "16. Panzer-Division", "side": "axis", "level": "division", "type": "panzer_division", "parentId": "XIVPK", "childrenIds": ["2PzRgt"], "tags": [], "notes": [], "position": [33, -20], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}},
+        {"id": "2PzRgt", "name": "Panzer-Regiment 2", "side": "axis", "level": "regiment", "type": "infantry_regiment", "parentId": "16PzD", "childrenIds": [], "tags": [], "notes": ["Using infantry template as placeholder"], "position": [36, -22], "provenance": {"source_id": "axis_6a_wiki", "confidence": "low", "generated_by_template": false}}
+      ],
+      "roots": ["6A"]
+    }
+  ]
+}

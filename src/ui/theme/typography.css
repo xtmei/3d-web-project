@@ -1,0 +1,4 @@
+:root {
+  --font-sans: "IBM Plex Sans", "Inter", "Segoe UI", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", "SFMono-Regular", "Consolas", "Liberation Mono", ui-monospace, monospace;
+}
